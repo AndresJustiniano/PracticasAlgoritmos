@@ -1,0 +1,49 @@
+#include <iostream>
+#include <conio.h>
+#define FIL 20
+#define COL 20
+using namespace std;
+
+struct tVector{
+	int mat [20][20];
+	int nmat;
+};
+ 
+void cargar(tVector vec[],int n);
+void mostrar(tVector vec[],int n);
+
+void main(){
+	 int n;
+	 tVector vec[20];
+	 cout << "Ingrese el Valor de N: "<< endl;
+	 cin >> n;
+	 cargar(vec,n);
+	 mostrar(vec,n);
+	 getch();
+}
+
+void cargar(tVector vec[],int n){
+	int i,j,k;
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			for(k=0;k<n;k++){
+				cout << "Ingrese el valor del elemento ("<< i <<","<< j <<","<< k <<"). ";
+				cin >> vec[i]. mat[j][k];
+			}
+		}
+	}
+}
+
+void mostrar(tVector vec[],int n){
+	int i,j,k;
+	cout << "\nLa Matriz es---------->>>: \n\n";
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			for(k=0;k<n;k++){
+				cout << vec[i].mat[j][k] << "  ";
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+}
